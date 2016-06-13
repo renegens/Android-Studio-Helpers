@@ -2,7 +2,7 @@
 
 This repo has some Gradle helpers to speed up adding common libraries.
 
-In the settings folder is jar version of the open source Novoda settings for Android Studio.
+In the settings folder is jar version of the open source [Novoda settings](https://medium.com/sebs-top-tips/share-the-settings-with-the-whole-team-android-studio-protip-6-3cce16eb2ea4#.wlu8xdrn6) for Android Studio.
 
 This is an Android Studio template for MVP. 
 
