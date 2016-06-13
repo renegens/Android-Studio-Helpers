@@ -6,7 +6,7 @@ In the settings folder is jar version of the open source Novoda settings for And
 
 This is an Android Studio template for MVP. 
 
-This version is a fork from [Android-Studio-MVP-template](https://github.com/benoitletondor/Android-Studio-MVP-template) and follows Paul Blundell suggestions on naming classes for the MVP architecture. 
+This version is a fork from [Android-Studio-MVP-template](https://github.com/benoitletondor/Android-Studio-MVP-template) and follows [Paul Blundell](https://www.novoda.com/blog/better-class-naming/) suggestions on naming classes for the MVP architecture. 
 
 Here's the hierarchy it follows:
 
