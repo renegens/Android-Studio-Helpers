@@ -45,7 +45,7 @@ First of all, create the base hierarchy and classes using `MVP Boilerplate` from
 
 ![Create MVP Boilerplate](static/createboilerplate.png "Create MVP Boilerplate")
 
-It will generate an `App` class that you should use as your Application, an `ActivityScope`, `FragmentScope`, `AppModule` and `AppComponent` for injection, a `BaseActivity`, `BaseFragment`, `BasePresenter` and `BaseInteractor`.
+It will generate an `App` class that you should use as your Application, an `AppModule` and a `AppComponent` for injection.
 
 > Be sure to use the generated `App` as your Application into your manifest!
 
@@ -58,7 +58,7 @@ Then you can create a new `MVP Activity`. It will create:
 - A `Component` and a `Module` for Dagger 2 injection
 - A `View` interface for your Activity
 - A `Presenter` interface and default implementation class
-- An `Interactor` interface and default implementation class for your model
+- An `Model` interface and default implementation class for your model
 
 > It's important that you **create it from the root package**, otherwise it will re-create the whole MVP hierarchy under your subpackage which is not what you want.
 
