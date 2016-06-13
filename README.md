@@ -1,10 +1,12 @@
-# Android Studio MVP Template
+# Android Studio Helpers
+
+This repo has some Gradle helpers to speed up adding common libraries.
+
+In the settings folder is jar version of the open source Novoda settings for Android Studio.
 
 This is an Android Studio template for MVP. 
 
 This version is a fork from [Android-Studio-MVP-template](https://github.com/benoitletondor/Android-Studio-MVP-template) and follows Paul Blundell suggestions on naming classes for the MVP architecture. 
-
-In the settings folder is jar version of the open source Novoda settings for Android Studio.
 
 Here's the hierarchy it follows:
 
@@ -54,7 +56,7 @@ It will generate an `App` class that you should use as your Application, an `App
 Then you can create a new `MVP Activity`. It will create:
 
 - An `Activity`
-- A layout for your Activity
+- A layout for your Activity based on Constraint Layout
 - A `Component` and a `Module` for Dagger 2 injection
 - A `View` interface for your Activity
 - A `Presenter` interface and default implementation class
