@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    name="MVP Fragment"
+    minApi="15"
+    minBuildApi="15"
+    description="Creates a new MVP fragment">
+
+    <category value="MVP" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="CustomFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="fragment_${classToResource(activityClass)}"
+        default="fragment_custom"
+        help="The name of the layout to create for the fragment" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+       
+
+    <execute file="recipe.xml.ftl" />
+
+</template>  
