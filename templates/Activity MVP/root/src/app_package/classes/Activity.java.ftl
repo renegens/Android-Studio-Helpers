@@ -12,6 +12,9 @@ import javax.inject.Inject;
 
 public class ${activityClass} extends AppCompatActivity implements ${activityClass}MVP.View {
 
+		private static final String TAG = ${activityClass}.class.getName();
+
+
 
     @Inject
     ${activityClass}MVP.Presenter presenter;

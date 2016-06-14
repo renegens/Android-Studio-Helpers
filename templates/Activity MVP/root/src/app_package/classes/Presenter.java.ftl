@@ -3,6 +3,8 @@ package ${packageName}.presenter;
 
 public class ${activityClass}Presenter implements ${activityClass}MVP.Presenter {
 
+		private static final String TAG = ${activityClass}Presenter.class.getName();
+
     private ${activityClass}MVP.Model model;
     private ${activityClass}MVP.View view;
 
