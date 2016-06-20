@@ -34,9 +34,8 @@ public class ${activityClass} extends AppCompatActivity implements ${activityCla
     @Override
     protected void onResume() {
         super.onResume();
-        if (presenter == null){
-            presenter.setView(this);
-        }
+        presenter.setView(this);
+        
     }
 
 

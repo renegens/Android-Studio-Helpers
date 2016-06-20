@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    name="MVP Boilerplate"
+    minApi="14"
+    minBuildApi="14"
+    description="Creates a hierarchy for MVP with dagger II injections">
+
+    <category value="MVP" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="appClass"
+        name="Application Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="App"
+        default="App"
+        help="The name of the application class to create" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MainActivity"
+        help="The name of the activity class that will be created create" />
+
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <execute file="recipe.xml.ftl" />
+
+</template>  

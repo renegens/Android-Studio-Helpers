@@ -47,8 +47,6 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (presenter == null) {
-            presenter.setView(this);
-        }
+        presenter.setView(this);
     }
 }
