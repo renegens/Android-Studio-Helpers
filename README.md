@@ -15,6 +15,7 @@ com.company.app
     +-- injection
     |   - AppComponent
     |   - AppModule
+    |   - MvpModule
     +-- model
     |   - MainActivityModel
     +-- presenter
@@ -47,7 +48,7 @@ First of all, create the base hierarchy and classes using `MVP Boilerplate` from
 
 ![Create MVP Boilerplate](static/createboilerplate.png "Create MVP Boilerplate")
 
-It will generate an `App` class that you should use as your Application, an `AppModule` and a `AppComponent` for injection.
+It will generate an `App` class that you should use as your Application, an `ApplicationModule` and a `ApplicationComponent` for injection.
 
 > Be sure to use the generated `App` as your Application into your manifest!
 
@@ -57,7 +58,7 @@ Then you can create a new `MVP Activity`. It will create:
 
 - An `Activity`
 - A layout for your Activity based on Constraint Layout
-- A `Component` and a `Module` for Dagger 2 injection
+- A `Component` and  `Module` for Dagger 2 injection
 - A `View` interface for your Activity
 - A `Presenter` interface and default implementation class
 - An `Model` interface and default implementation class for your model
