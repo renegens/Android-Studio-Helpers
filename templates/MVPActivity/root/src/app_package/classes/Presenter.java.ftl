@@ -5,8 +5,10 @@ public class ${activityClass}Presenter implements ${activityClass}MVP.Presenter 
 
 		private static final String TAG = ${activityClass}Presenter.class.getName();
 
-    private ${activityClass}MVP.Model model;
+    @Nullable
     private ${activityClass}MVP.View view;
+		private ${activityClass}MVP.Model model;
+
 
     public ${activityClass}Presenter(${activityClass}MVP.Model model) {
         this.model = model;
