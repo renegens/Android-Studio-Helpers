@@ -30,7 +30,7 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Dagger injection
-        ((CHANGE THIS TO APPLICATION APP)getApplication()).getComponent().inject(this);
+        ((CHANGE THIS TO APPLICATION APP) getActivity().getApplication()).getComponent().inject(this);
 
         presenter.setView(this);
     }
@@ -39,7 +39,7 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.${layoutName}, container, false);
         // Inflate the layout for this fragment
         return view;
     }
