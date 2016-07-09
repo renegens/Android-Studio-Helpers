@@ -77,6 +77,10 @@ You must build the project a two or three times until Dagger II will generate th
 
 Feel free to add or modify anything you would like to see and submit a pull request or mention it in the issues. 
 
+#### Update
+
+When a new Android Studio version is released, it will prompt you to delete the custom templates. You must delete them and re-import.
+
 #### ToDo
 
 - Add Recycler Template
