@@ -27,7 +27,7 @@
         suggest="${activityToLayout(activityClass)}"
         default="activity_main"
         help="The name of the layout to create for the activity" />
-
+        
     <parameter
         id="isLauncher"
         name="Launcher Activity"
@@ -36,11 +36,18 @@
         help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
 
     <parameter
+        id="featureName"
+        name="Feature Name for package"
+        constraints="nonempty"
+        type="string" />
+
+    <parameter
         id="packageName"
         name="Package name"
         type="string"
         constraints="package"
-        default="com.mycompany.myapp" />              
+        default="com.mycompany.myapp"
+         />              
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

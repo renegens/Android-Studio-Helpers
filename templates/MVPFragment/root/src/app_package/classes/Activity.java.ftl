@@ -1,4 +1,4 @@
-package ${packageName}.view;
+package ${packageName}.${featureName};
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ${packageName}.R;
-import ${packageName}.presenter.${activityClass}MVP;
+import ${packageName}.${featureName}.${activityClass}MVP;
 
 import javax.inject.Inject;
 
@@ -30,9 +30,8 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Dagger injection
-        ((CHANGE THIS TO APPLICATION APP) getActivity().getApplication()).getComponent().inject(this);
+        (("CHANGE THIS TO APPLICATION APP") getActivity().getApplication()).getComponent().inject(this);
 
-        presenter.setView(this);
     }
 
     @Override
@@ -44,9 +43,11 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
         return view;
     }
 
+    
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    public void onResume() {
+        super.onResume();
         presenter.setView(this);
+        
     }
 }

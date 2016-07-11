@@ -1,4 +1,4 @@
 <recipe>
 
-   	<mkdir at="${escapeXmlAttribute(srcOut)}/injection" />
+   	<mkdir at="${escapeXmlAttribute(srcOut)}/root" />
 </recipe>

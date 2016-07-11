@@ -1,4 +1,4 @@
-package ${packageName}.presenter;
+package ${packageName}.${featureName};
 
 
 public interface ${activityClass}MVP {

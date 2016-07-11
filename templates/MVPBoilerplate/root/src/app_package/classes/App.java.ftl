@@ -1,4 +1,4 @@
-package ${packageName};
+package ${packageName}.root;
 
 import android.app.Application;
 
@@ -13,7 +13,6 @@ public class ${appClass} extends Application {
         //needs to run once to generate it
         component = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
-                .mvpModule(new MvpModule())
                 .build();
 
     }

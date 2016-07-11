@@ -4,17 +4,20 @@
 
     
     <instantiate from="src/app_package/classes/Activity.java.ftl"
-      to="${escapeXmlAttribute(srcOut)}/view/${activityClass}.java" />
+      to="${escapeXmlAttribute(srcOut)}/${featureName}/${activityClass}.java" />
 
     <instantiate from="src/app_package/classes/Presenter.java.ftl"
-      to="${escapeXmlAttribute(srcOut)}/presenter/${activityClass}Presenter.java" />
+      to="${escapeXmlAttribute(srcOut)}/${featureName}/${activityClass}Presenter.java" />
 
     <instantiate from="src/app_package/classes/ActivityMVP.java.ftl"
-      to="${escapeXmlAttribute(srcOut)}/presenter/${activityClass}MVP.java" />
+      to="${escapeXmlAttribute(srcOut)}/${featureName}/${activityClass}MVP.java" />
 
     <instantiate from="src/app_package/classes/Model.java.ftl"
-      to="${escapeXmlAttribute(srcOut)}/model/${activityClass}Model.java" />
+      to="${escapeXmlAttribute(srcOut)}/${featureName}/${activityClass}Model.java" />
 
-    <open file="${srcOut}/${activityClass}.java"/>
+    <instantiate from="src/app_package/classes/Module.java.ftl"
+      to="${escapeXmlAttribute(srcOut)}/${featureName}/${featureName?cap_first}Module.java" />
+
+    <open file="${srcOut}/${featureName}/${activityClass}.java"/>
 
 </recipe>

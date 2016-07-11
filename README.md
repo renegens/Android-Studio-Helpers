@@ -1,29 +1,24 @@
 # Android Studio Helpers
 
-This repo has some Gradle helpers to speed up adding common libraries.
+This repo consists of a settings jar provided by Novoda, an MVP and dagger 2 Android Studio Template + some gradle file for common libraries.
 
 In the settings folder is jar version of the open source [Novoda settings](https://medium.com/sebs-top-tips/share-the-settings-with-the-whole-team-android-studio-protip-6-3cce16eb2ea4#.wlu8xdrn6) for Android Studio.
 
-This is an Android Studio template for MVP. 
-
-This version is based on a fork from [Android-Studio-MVP-template](https://github.com/benoitletondor/Android-Studio-MVP-template) and follows [Paul Blundell](https://www.novoda.com/blog/better-class-naming/) suggestions on naming classes for the MVP architecture. 
+The Android Studio MVP template is based on a fork from [Android-Studio-MVP-template](https://github.com/benoitletondor/Android-Studio-MVP-template) and follows [Paul Blundell](https://www.novoda.com/blog/better-class-naming/) suggestions on naming classes for the MVP architecture. 
 
 Here's the hierarchy it follows:
 
 ```
 com.company.app
-    +-- injection
+    +-- root
     |   - AppComponent
     |   - AppModule
-    |   - MvpModule
-    +-- model
+    |   - YourApp
+    +-- featureName
     |   - MainActivityModel
-    +-- presenter
     |   - MainActivityMVP
     |   - MainActivityPresenter
-    +-- view
-    |   - MainActivity
-    | - YourApp
+    |   - featureNameModule
 ```
 
 ## Prerequisites
@@ -48,7 +43,7 @@ First of all, create the base hierarchy and classes using `MVP Boilerplate` from
 
 ![Create MVP Boilerplate](static/createboilerplate.png "Create MVP Boilerplate")
 
-It will generate an `App` class that you should use as your Application, an `ApplicationModule`, `MvpModule` and a `ApplicationComponent` for injection. It will ask for the first Activity or Fragment so it can generate an example how to inject.
+It will generate an `App` class that you should use as your Application, an `ApplicationModule` and a `ApplicationComponent` for injection. 
 
 > Be sure to use the generated `App` as your Application into your manifest! 
 > `android:name="package.YourApplicationClass"` in your `<activity>` tag.
@@ -62,16 +57,17 @@ Then you can create a new `MVP Activity` or `MVP Fragment`. It will create:
 - A `View` interface for your Activity
 - A `Presenter` interface and default implementation class
 - An `Model` interface and default implementation class for your model
+- A `Module` class to add your dagger II modules for that feature.
 
 > It's important that you **create it from the root package**, otherwise it will re-create the whole MVP hierarchy under your subpackage which is not what you want.
 
 #### 3. Add another activity or Fragment
 - It will create the classes with defaults in it.
-- You will need to add manually the injections in the `ApplicationComponent` and the `@Provides` methods in the `MvpModule`.
+- You will need to add manually the injections in the `ApplicationComponent` and the `@Provides` methods in the `featureNameModule`.
 
 ### Notice
 
-You must build the project a two or three times until Dagger II will generate the appropriate classes. 
+You must build the project so Dagger II will generate the appropriate classes. 
 
 #### Contribute
 

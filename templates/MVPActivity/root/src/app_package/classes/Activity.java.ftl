@@ -1,10 +1,10 @@
-package ${packageName}.view;
+package ${packageName}.${featureName};
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import ${packageName}.R;
-import ${packageName}.presenter.${activityClass}MVP;
+import ${packageName}.${featureName}.${activityClass}MVP;
 
 import javax.inject.Inject;
 
@@ -25,9 +25,10 @@ public class ${activityClass} extends AppCompatActivity implements ${activityCla
         setContentView(R.layout.${layoutName});
 
         //Dagger injection
-        ((CHANGE THIS TO APPLICATION APP) getApplication()).getComponent().inject(this);
+        (("CHANGE THIS TO APPLICATION APP") getApplication()).getComponent().inject(this);
+        //add inject to to application component
 
-        presenter.setView(this);
+
 
     }
 

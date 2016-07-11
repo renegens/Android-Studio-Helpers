@@ -28,6 +28,12 @@
         help="The name of the layout to create for the fragment" />
 
     <parameter
+        id="featureName"
+        name="Feature Name for package"
+        constraints="nonempty"
+        type="string" />
+
+    <parameter
         id="packageName"
         name="Package name"
         type="string"

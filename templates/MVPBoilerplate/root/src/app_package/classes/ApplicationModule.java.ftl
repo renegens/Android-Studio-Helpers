@@ -1,4 +1,4 @@
-package ${packageName}.injection;
+package ${packageName}.root;
 
 import android.app.Application;
 import android.content.Context;

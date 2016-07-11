@@ -1,14 +1,14 @@
-package ${packageName}.injection;
+package ${packageName}.${featureName};
 
 import dagger.Module;
 import dagger.Provides;
 
-import ${packageName}.model.${activityClass}Model;
-import ${packageName}.presenter.${activityClass}MVP;
-import ${packageName}.presenter.${activityClass}Presenter;
+import ${packageName}.${featureName}.${activityClass}Model;
+import ${packageName}.${featureName}.${activityClass}MVP;
+import ${packageName}.${featureName}.${activityClass}Presenter;
 
 @Module
-public class MvpModule {
+public class ${featureName?cap_first}Module {
 
 
     @Provides

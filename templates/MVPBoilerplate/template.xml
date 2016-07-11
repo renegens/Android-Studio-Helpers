@@ -19,13 +19,13 @@
         default="App"
         help="The name of the application class to create" />
 
-    <parameter
+ <!--    <parameter
         id="activityClass"
         name="Activity Name"
         type="string"
         constraints="class|unique|nonempty"
         default="MainActivity"
-        help="The name of the activity class that will be created create" />
+        help="The name of the activity class that will be created create" /> -->
 
 
     <parameter

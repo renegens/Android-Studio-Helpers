@@ -1,4 +1,4 @@
-package ${packageName}.presenter;
+package ${packageName}.${featureName};
 
 
 public class ${activityClass}Presenter implements ${activityClass}MVP.Presenter {
@@ -15,7 +15,7 @@ public class ${activityClass}Presenter implements ${activityClass}MVP.Presenter 
     }
 
     @Override
-    public void setView(${activityClass}MVP.View view) {
+    public void setView(@NonNull ${activityClass}MVP.View view) {
         this.view = view;
     }
 
