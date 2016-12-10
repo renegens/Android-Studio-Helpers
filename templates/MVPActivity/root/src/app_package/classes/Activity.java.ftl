@@ -3,7 +3,7 @@ package ${packageName}.${featureName};
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import ${packageName}.R;
+import ${packageName}.${featureName}.R;
 import ${packageName}.${featureName}.${activityClass}MVP;
 
 import javax.inject.Inject;
@@ -12,9 +12,7 @@ import javax.inject.Inject;
 
 public class ${activityClass} extends AppCompatActivity implements ${activityClass}MVP.View {
 
-		private static final String TAG = ${activityClass}.class.getName();
-
-
+	private static final String TAG = ${activityClass}.class.getName();
 
     @Inject
     ${activityClass}MVP.Presenter presenter;
@@ -33,8 +31,8 @@ public class ${activityClass} extends AppCompatActivity implements ${activityCla
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onStart() {
+        super.onStart();
         presenter.setView(this);
         
     }

@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ${packageName}.R;
+import ${packageName}.${featureName}R;
 import ${packageName}.${featureName}.${activityClass}MVP;
 
 import javax.inject.Inject;
@@ -17,7 +17,7 @@ import javax.inject.Inject;
 
 public class ${activityClass} extends Fragment implements ${activityClass}MVP.View {
 
-		private static final String TAG = ${activityClass}.class.getName();
+	private static final String TAG = ${activityClass}.class.getName();
 
     @Inject
     ${activityClass}MVP.Presenter presenter;
@@ -25,6 +25,14 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
     public ${activityClass}() {
         // Required empty public constructor
     }
+
+    public static ${activityClass} newInstance(int someInt) {
+    ${activityClass} fragment = new ${activityClass}();
+    Bundle args = new Bundle();
+    args.putInt("someInt", someInt);
+    fragment.setArguments(args);
+    return fragment;
+}
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,8 +53,8 @@ public class ${activityClass} extends Fragment implements ${activityClass}MVP.Vi
 
     
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onStart() {
+        super.onStart();
         presenter.setView(this);
         
     }
